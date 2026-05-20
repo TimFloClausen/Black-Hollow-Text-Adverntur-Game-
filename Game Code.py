@@ -1,9 +1,10 @@
 print("Welcome to Black Hollows!")
 print("A Text Adventure made by TimFloClausen")
 
-input("Press Enter to continue...")
+while True:
+        input("Press Enter to continue... ")
 
-print("""
+        print("""
 ══════════════════════════════════════
         BLACK HOLLOWS - INTRO
 ══════════════════════════════════════
@@ -42,3 +43,8 @@ So...
 
 you stayed.
 """)
+
+        input("Press enter to Start the Story ")
+        print("""Knock KNock Kocnk, you woke up. You head was full of a big pain.
+              It fells like some litte tiny chratur in your strikes the head from the inside with a hammer. 
+              You knwo why aou have sucz a pain. You have a bih hangover from las night in the pub.""")
