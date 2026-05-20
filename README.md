@@ -1,7 +1,7 @@
 # Black Hollow (Text Adverntur Game)
 A Text Adventure Game coded in Pytho
 
-Welcome to Black Hollows.
+Welcome to Black Hollow.
 
 A small town in the north of the United Kingdom.
 Run-down, remote and rainy, surrounded by forests
