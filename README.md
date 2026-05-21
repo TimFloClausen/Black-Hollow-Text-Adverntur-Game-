@@ -1,12 +1,12 @@
-# Black Hollow (Text Adverntur Game)
-A Text Adventure Game coded in Pytho
+# Black Hollow (Text Adventure Game)
+A Text Adventure Game coded in Python
 
 Welcome to Black Hollow.
 
 A small town in the north of the United Kingdom.
 Run-down, remote and rainy, surrounded by forests
 and old stone houses.
-Black Hollows has:
+Black Hollow has:
 - an old elementary school, built after World War II
 - abandoned bunkers from World War II
 - an old atomic bunker renewed during the Cold War
@@ -15,7 +15,7 @@ Black Hollows has:
 - a dilapidated cinema
 - a gas station called "Gips"
 You are Thomas Bruce.
-Black Hollows is your hometown, and you are the
+Black Hollow is your hometown, and you are the
 owner of "Gips".
 You inherited the gas station from your father,
 who died of cancer last year.

@@ -1,6 +1,11 @@
+def wait():
+    input()
+
+
+
 print("Welcome to Black Hollow!")
 print("A Text Adventure made by TimFloClausen")
-input("Press Enter to continue... ")
+input("Press enter to the game: ")
 print("""
 ══════════════════════════════════════
         BLACK HOLLOW - INTRO
@@ -29,30 +34,47 @@ gas station.
 So...
 you stayed.
 """)
-input("Press Enter to start the story... ")
-print("""Knock, knock — you wake up. Your head is pounding.
+input("Press Enter to continou! ")
+print("""Knock, knock — you wake up. Your head is pounding,
 It feels like tiny creatures inside your skull are hitting it with hammers.
 You know why you have such pain: a big hangover from last night at the pub.
 Someone is knocking at the door.
 The bell is broken, so the person has to knock on the old red door of the apartment you inherited from your father.
 """)
+
+wait()
+
 task_1 = input("What do you want to do first? Open the door or take a pill? (door/pills): ").strip().lower()
+ 
+while task_1 not in ["door", "pills"]:
+    print("I didn't understand that.")
 
+    task_1 = input(
+        "Please choose: door or pills: "
+    ).strip().lower()
+
+    
 if task_1 == "door":
-    print("You open the door. Two police officers are standing in front of you.")
+    print(" You chose door! You open the door. Two police officers are standing in front of you.")
 elif task_1 == "pills":
-    print("You go to the bathroom, take a paracetamol, and then open the door.")
+    print("You chose pills! You go to the bathroom, take a paracetamol, and then open the door.")
     print("Two police officers are still waiting outside.")
-else:
-    print("I didn't understand that. Please choose 'door' or 'pills'.")
+    wait()
 
-input("""
+
+
+
+    
+
+print("""
 
 Mr Potter, the local police officer, and his partner are standing in front of your door.
 "Good morning, Mr Bruce. Sorry for the disturbance at this early hour.
 We need to inform you that your brother is dead.
-A woman found his body in the forest near the old atomic bunker. Can we come in and ask you some questions?"
+A woman found his body in the forest near the old atomic bunker. Can we come in and ask you some questions?
 """)
+
+wait() 
     
 print("""
 
@@ -65,13 +87,20 @@ And how?
 So many questions are going through your head.
 """)
 
-input("""
+
+wait()
+
+
+print("""
 
 You let the police officer into your apartment. You point to the chairs in the kitchen and say that the both officers can take a seat.
 Two small wooden chairs.
 Your initials are carved into the backrest: T + J.
 The paint is faded, but still visible. You and your brother painted them when you were children.
 """)
+
+
+wait()
 
 print("""The police officer asks you some questions. You can't remember much after you answer them.
       After half an hour they are finished.
@@ -81,7 +110,19 @@ print("""The police officer asks you some questions. You can't remember much aft
       the dead body of their relatives or friends...
       So do you want to see the photo or just have it described?""")
 
-task_2 = input("Do you want to see a picture or only a description? (photo/description) ")
+wait()
+
+task_2 = input("Do you want to see a picture or only a description? (photo/description) ").strip().lower()
+
+while task_2 not in ["photo", "description"]:
+    print("I didn't understand that.")
+
+    task_2 = input(
+        "Please choose: photo or description: "
+    ).strip().lower()
+
+
+
 
 if task_2 == "photo":
     print("""Potter silently hands you the photo.
@@ -105,5 +146,3 @@ Green.
 A deep, unnatural green.
 Like something inside his body had changed.""")
     
-else:
-    print("I didn't understand that. Please choose 'door' or 'pills'.")
