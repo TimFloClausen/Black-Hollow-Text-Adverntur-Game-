@@ -14,6 +14,7 @@ Black Hollows has:
 - four pubs
 - a dilapidated cinema
 - a gas station called "Gips"
+
 You are Thomas Bruce.
 Black Hollows is your hometown, and you are the
 owner of "Gips".
