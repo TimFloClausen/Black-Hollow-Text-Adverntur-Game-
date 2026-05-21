@@ -1,3 +1,5 @@
+import time
+
 def wait():
     input()
 
@@ -35,7 +37,17 @@ So...
 you stayed.
 """)
 input("Press Enter to continou! ")
-print("""Knock, knock — you wake up. Your head is pounding,
+
+print("Knock...")
+time.sleep(1)
+
+print("Knock...")
+time.sleep(1)
+
+print("Knock...") 
+time.sleep(1)
+
+print("""You wake up. Your head is pounding,
 It feels like tiny creatures inside your skull are hitting it with hammers.
 You know why you have such pain: a big hangover from last night at the pub.
 Someone is knocking at the door.
