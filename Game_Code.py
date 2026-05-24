@@ -1,13 +1,9 @@
 import time
-from pathlib import Path
 
-BASE_PATH = Path(__file__).resolve().parent
-STORY_PATH = BASE_PATH / "story_txt"
-
-with open(STORY_PATH / "intro.txt", "r", encoding="utf-8") as file:
+with open("story_txt/intro.txt", "r", encoding="utf-8") as file:
     intro = file.read()
 
-with open(STORY_PATH / "knock.txt", "r", encoding="utf-8") as file:
+with open("story_txt/knock.txt", "r", encoding="utf-8") as file:
     knock = file.read()
 
 with open("story_txt/door_police.txt", "r", encoding="utf-8") as file:
@@ -28,24 +24,37 @@ with open("story_txt/photo.txt", "r", encoding="utf-8") as file:
 with open("story_txt/description.txt", "r", encoding="utf-8") as file:
     description  = file.read()
 
+with open("story_txt/left.txt", "r", encoding="utf-8") as file:
+    left  = file.read()
+
+
+with open("story_txt/go_or_bed.txt", "r", encoding="utf-8") as file:
+    go_or_bed  = file.read()
+
+
+with open("story_txt/walk.txt", "r", encoding="utf-8") as file:
+    walk  = file.read()
+
+with open("story_txt/walkpart2.txt", "r", encoding="utf-8") as file:
+    walkpart2  = file.read()
+
+with open("story_txt/walkpart3.txt", "r", encoding="utf-8") as file:
+    walkpart3  = file.read()
+
+with open("story_txt/walkpart4.txt", "r", encoding="utf-8") as file:
+    walkpart4  = file.read()
+
+
+with open("story_txt/walkpart5.txt", "r", encoding="utf-8") as file:
+    walkpart5  = file.read()
 
 
 
 
 
-    
-
-
-    
-    
 
 
 
-
-
-
-
-    
 
 
 def wait():
@@ -133,4 +142,40 @@ elif task_2 == "description":
      print("You chose description!")
      print(description)
 
+
+wait()
+
+print(left)
+
+wait()
+
+print(go_or_bed)
+
+wait()
+
+task_3 = input("Do you want to go out for a walk, or go to bed again? (walk/bed) ").strip().lower()
+
+while task_3 not in ["walk", "bed"]:
+    print("I didn't understand that.")
+
+    task_3 = input(
+        "Please choose: walk or bed: "
+    ).strip().lower()
+
+
+if task_3 == "walk":
+    print("You chose walk!")
+    print(walk)
+    wait()
+    print(walkpart2)
+    wait()
+    print(walkpart3)
+    wait()
+    print(walkpart4)
+    wait()
+    print(walkpart5)
+
+elif task_3 == "bed":
+     print("You chose bed!")
+     print(description)
     
