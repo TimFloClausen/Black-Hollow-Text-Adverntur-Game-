@@ -208,3 +208,8 @@ print(pc1)
 
 task_4 = input("Tippe in the password: ")
 
+if task_4 is "pizza":
+    print("Password correct, you got into the PC!")
+else:
+    print("Ronge passwort try again! .")
+    task_4 = input("Tippe in the password:")
