@@ -1,4 +1,7 @@
+# importet moduls
 import time
+
+# lode textfiles and link them
 
 with open("story_txt/intro.txt", "r", encoding="utf-8") as file:
     intro = file.read()
@@ -49,25 +52,43 @@ with open("story_txt/walkpart5.txt", "r", encoding="utf-8") as file:
     walkpart5  = file.read()
 
 
+    
+with open("story_txt/dream.txt", "r", encoding="utf-8") as file:
+    dream  = file.read()
+
+with open("story_txt/dream2.txt", "r", encoding="utf-8") as file:
+    dream2  = file.read()
+with open("story_txt/dream3.txt", "r", encoding="utf-8") as file:
+    dream3  = file.read()
+
+
+with open("story_txt/waup.txt", "r", encoding="utf-8") as file:
+    waup  = file.read()
+
+
+with open("story_txt/waup2.txt", "r", encoding="utf-8") as file:
+    waup2  = file.read()
+
+with open("story_txt/pc1.txt", "r", encoding="utf-8") as file:
+    pc1  = file.read()
 
 
 
-
-
-
-
+# def function that make that the player need to press "enter" to to continue with the story
 
 def wait():
     input()
 
 
+# extremely epic intro (I should get GOTY award for this /s)
 
 print("Welcome to Black Hollow!")
 print("A Text Adventure made by TimFloClausen")
 input("Press enter to start the game: ")
 print(intro)
-
 input("Press Enter to continue! ")
+
+# game starts
 
 print("Knock...")
 time.sleep(1)
@@ -99,10 +120,6 @@ elif task_1 == "pills":
     print("Two police officers are still waiting outside.")
     wait()
 
-
-
-
-    
 
 print(door_police)
 
@@ -176,6 +193,18 @@ if task_3 == "walk":
     print(walkpart5)
 
 elif task_3 == "bed":
-     print("You chose bed!")
-     print(description)
-    
+    print("You chose bed!")
+    print(dream)
+    wait()
+    print(dream2)
+    wait()
+    print(dream3)
+    wait
+    print(waup)
+    wait()
+    print(waup2)
+
+print(pc1)
+
+task_4 = input("Tippe in the password: ")
+
