@@ -210,6 +210,12 @@ password = "pizza"
 while True:
     task_4 = input("Tippe in the password: ").strip().lower()
     if task_4 == password:
-        print("Pc Unlocked!")
+        print("You unlocked the Pc!")
         break
     print("Falsches Passwort. Bitte versuche es noch einmal.")
+
+task_5 = input("In wiche folder do you wana go? photos/music/picturs/messags/top_secret/documents")
+
+
+
+
