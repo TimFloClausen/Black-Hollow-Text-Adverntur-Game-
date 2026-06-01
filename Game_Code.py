@@ -199,19 +199,17 @@ elif task_3 == "bed":
     print(dream2)
     wait()
     print(dream3)
-    wait
+    wait()
     print(waup)
     wait()
     print(waup2)
 
 print(pc1)
 
-task_4 = input("Tippe in the password: ")
-
-if task_4 is "pizza":
-    print("Password correct, you got into the PC!")
-elif task_4 is not "pizza":
-    print("Ronge passwort try again! .")
-    task_4 = input("Tippe in the password:")
-
-print("Pc Unlocked!")
+password = "pizza"
+while True:
+    task_4 = input("Tippe in the password: ").strip().lower()
+    if task_4 == password:
+        print("Pc Unlocked!")
+        break
+    print("Falsches Passwort. Bitte versuche es noch einmal.")
