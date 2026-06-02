@@ -216,6 +216,5 @@ while True:
 
 task_5 = input("In wiche folder do you wana go? photos/music/picturs/messags/top_secret/documents")
 
-
-
-
+if task_5 == "photos":
+    print
