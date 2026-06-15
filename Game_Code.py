@@ -241,4 +241,7 @@ elif task_5 == "messags":
     print("You are in the right Folder")
     wait()
     print(messags1)
+    wait()
+    print(messag1)
+    
 

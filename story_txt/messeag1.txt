@@ -1,4 +1,10 @@
-You are seeing a programm file.
-The programm is called "lightchat"
-James coded ist by himslef when he was 16.
-The programm is simpel:
+You are looking at a program file.
+The program is called “LightChat.”
+James coded it by himself when he was 16.
+You and James have been using this program to communicate and send messages.
+Yes, it didn’t really make sense because you are using the same PC…
+but you make notes for each other and stuff like that.
+You start the program.
+The chance that you will get a message from James is close to zero.
+But you still open the program…
+And it appears… The program shows that James has left a message for you!
