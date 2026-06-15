@@ -79,6 +79,14 @@ with open("story_txt/waup2.txt", "r", encoding="utf-8") as file:
 with open("story_txt/pc1.txt", "r", encoding="utf-8") as file:
     pc1  = file.read()
 
+with open("story_txt/messeag1.txt", "r", encoding="utf-8") as file:
+    messeag1  = file.read()
+
+
+
+
+
+
 
 
 # def function that make that the player need to press "enter" to to continue with the story
@@ -221,11 +229,16 @@ while True:
         break
     print("Falsches Passwort. Bitte versuche es noch einmal.")
 
-task_5 = input("In wiche folder do you wana go? photos/music/picturs/messags/top_secret/documents")
+task_5 = input("In wiche folder do you wana go? photos/music/messags/top_secret/documents")
 
 if task_5 == "photos":
     print("In the folder are some old photps from you and James, but thers is nothing else what is intersitsng for you!")
-if task_5 == "music":
+elif task_5 == "music":
     print("You are in the folder whit the old music from you and James, you click on a song and isten to it...")
-    pygame.mixer.music.load(file1)
+    pygame.mixer.music.load(music1)
     pygame.mixer.music.play()
+elif task_5 == "messags":
+    print("You are in the right Folder")
+    wait()
+    print(messags1)
+

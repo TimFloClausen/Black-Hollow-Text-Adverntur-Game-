@@ -1,0 +1,4 @@
+You are seeing a programm file.
+The programm is called "lightchat"
+James coded ist by himslef when he was 16.
+The programm is simpel:
