@@ -1,5 +1,12 @@
 # importet moduls
 import time
+import pygame
+
+# lode music and link them
+music1 = "music/black_by_pearl_jam.ogg"
+pygame.init()
+pygame.mixer.init()
+
 
 # lode textfiles and link them
 
@@ -217,4 +224,8 @@ while True:
 task_5 = input("In wiche folder do you wana go? photos/music/picturs/messags/top_secret/documents")
 
 if task_5 == "photos":
-    print
+    print("In the folder are some old photps from you and James, but thers is nothing else what is intersitsng for you!")
+if task_5 == "music":
+    print("You are in the folder whit the old music from you and James, you click on a song and isten to it...")
+    pygame.mixer.music.load(file1)
+    pygame.mixer.music.play()
