@@ -244,6 +244,7 @@ elif task_5 == "music":
     pygame.mixer.music.load(music1)
     pygame.mixer.music.play()
 
+elif task_5 == "top_secret":
     print("Oh no! You click on a file containing a virus. The PC is now broken!")
     print(game_over)
     break
