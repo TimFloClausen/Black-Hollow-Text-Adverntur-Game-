@@ -253,7 +253,7 @@ elif task_5 == "messages":
             quit()
 
         print("No, that isn't the correct meaning of the message. Try again!")
-        task_4 = input("Enter the eaning og the messeag: ").strip().lower()
+        task_4 = input("Enter the meaning og the messeag: ").strip().lower()
 
 
     
