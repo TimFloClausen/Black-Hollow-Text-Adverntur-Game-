@@ -192,6 +192,13 @@ while True:
 
 task_5 = input("Which folder do you want to open? photos/music/messages/top_secret/documents: ").strip().lower()
 
+while task_5 not in ["photos", "music", "top_secret", "documents", "messeages"]:
+    print("That folder dont exist.")
+
+    task_5 = input(
+        "Please choose: photos/music/messages/top_secret/documents:: "
+    ).strip().lower()
+
 if task_5 == "photos":
     print("The folder contains some old photos of you and James, but there is nothing else that interests you.")
 
