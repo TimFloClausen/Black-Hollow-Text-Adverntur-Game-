@@ -47,6 +47,9 @@ messeag1 = read_text("story_txt/messeag1.txt")
 messeag2 = read_text("story_txt/messeag2.txt")
 messeag3 = read_text("story_txt/messeag3.txt")
 game_over = read_text("story_txt/game_over.txt")
+messeag4 = read_text("story_txt/messaeg4.txt")
+messeag5 = read_text("story_txt/messaeg5.txt")
+messeag6 = read_text("story_txt/messaeg6.txt")
 
 
 # def function that make that the player need to press "enter" to to continue with the story
@@ -255,5 +258,9 @@ elif task_5 == "messages":
         print("No, that isn't the correct meaning of the message. Try again!")
         task_4 = input("Enter the meaning og the messeag: ").strip().lower()
 
-
-    
+wait()
+print(messeag4)
+wait
+print(messeag5)
+wait()
+print(messeag6)
