@@ -204,12 +204,18 @@ if task_5 == "photos":
 
 elif task_5 == "music":
     print("You open the folder containing the old music that you and James used to listen to. You click on a song and listen to it...")
+    task_5 = input(
+        "Please choose: photos/music/messages/top_secret/documents:: "
+    ).strip().lower()
+
     if audio_available:
         try:
             pygame.mixer.music.load(music1)
             pygame.mixer.music.play()
         except Exception:
             print(f"Could not play audio file: {music1}")
+
+
     else:
         print(f"(Audio disabled) would play: {music1}")
 
@@ -220,6 +226,11 @@ elif task_5 == "top_secret":
 
 elif task_5 == "documents":
     print("You open a folder filled with boring documents. Nothing special here...")
+    task_5 = input(
+        "Please choose: photos/music/messages/top_secret/documents:: "
+    ).strip().lower()
+
+
 
 
 elif task_5 == "messages":
@@ -235,11 +246,14 @@ elif task_5 == "messages":
     meaning = "the bunker"
 
     while True:
-        task_4 = input("Enter the password: ").strip().lower()
+        task_4 = input("Enter the meaning og the messeag: ").strip().lower()
 
         if task_4 == meaning:
             print(messeag3)
             quit()
 
         print("No, that isn't the correct meaning of the message. Try again!")
+        task_4 = input("Enter the eaning og the messeag: ").strip().lower()
+
+
     
