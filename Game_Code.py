@@ -256,6 +256,7 @@ elif task_5 == "top_secret":
 elif task_5 == "documents":
     print("You open a folder filled with boring documents. Nothing special here...")
 
+
 elif task_5 == "messages":
     print("You are in the right folder.")
     wait()
@@ -276,3 +277,4 @@ elif task_5 == "messages":
             quit()
 
         print("No, that isn't the correct meaning of the message. Try again!")
+    
