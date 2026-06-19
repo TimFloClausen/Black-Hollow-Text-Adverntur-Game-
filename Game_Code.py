@@ -87,8 +87,15 @@ with open("story_txt/messeag2.txt", "r", encoding="utf-8") as file:
     messeag2  = file.read()
 
 
-with open("story_txt/messeag3txt", "r", encoding="utf-8") as file:
+with open("story_txt/messeag3.txt", "r", encoding="utf-8") as file:
     messeag3 = file.read()
+
+
+
+
+with open("story_txt/game_over.txt", "r", encoding="utf-8") as file:
+    game_over = file.read()
+
 
 # def function that make that the player need to press "enter" to to continue with the story
 
@@ -268,7 +275,6 @@ elif task_5 == "messages":
         task_4 = input("Enter the password: ").strip().lower()
 
         if task_4 == meaning:
-            print(messages3)
-            break
+            print(messages3) and quit()
 
         print("No, that isn't the correct meaning of the message. Try again!")
