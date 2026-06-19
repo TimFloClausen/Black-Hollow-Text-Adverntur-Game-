@@ -237,11 +237,8 @@ while True:
         break
     print("Wrong password. Please try again")
 
-task_5 = input("In wiche folder do you wana go? photos/music/messags/top_secret/documents")
 
-task_5 = input("Which folder do you want to open? photos/music/messages/top_secret/documents: ")
-
-task_5 = input("Which folder do you want to open? photos/music/messages/top_secret/documents: ")
+task_5 = input("Which folder do you want to open? photos/music/messages/top_secret/documents: ").strip().lower()
 
 if task_5 == "photos":
     print("The folder contains some old photos of you and James, but there is nothing else that interests you.")
@@ -254,7 +251,7 @@ elif task_5 == "music":
 elif task_5 == "top_secret":
     print("Oh no! You click on a file containing a virus. The PC is now broken!")
     print(game_over)
-    break
+    quit()
 
 elif task_5 == "documents":
     print("You open a folder filled with boring documents. Nothing special here...")
@@ -262,9 +259,9 @@ elif task_5 == "documents":
 elif task_5 == "messages":
     print("You are in the right folder.")
     wait()
-    print(messages1)
+    print(messeag1)
     wait()
-    print(message2)
+    print(messeag2)
     wait()
     print("What could that message mean? You ask yourself...")
     wait()
@@ -275,6 +272,7 @@ elif task_5 == "messages":
         task_4 = input("Enter the password: ").strip().lower()
 
         if task_4 == meaning:
-            print(messages3) and quit()
+            print(messeag3)
+            quit()
 
         print("No, that isn't the correct meaning of the message. Try again!")
