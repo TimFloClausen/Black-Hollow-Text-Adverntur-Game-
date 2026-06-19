@@ -83,11 +83,12 @@ with open("story_txt/messeag1.txt", "r", encoding="utf-8") as file:
     messeag1  = file.read()
 
 
+with open("story_txt/messeag2.txt", "r", encoding="utf-8") as file:
+    messeag2  = file.read()
 
 
-
-
-
+with open("story_txt/messeag3txt", "r", encoding="utf-8") as file:
+    messeag3 = file.read()
 
 # def function that make that the player need to press "enter" to to continue with the story
 
@@ -227,21 +228,46 @@ while True:
     if task_4 == password:
         print("You unlocked the Pc!")
         break
-    print("Falsches Passwort. Bitte versuche es noch einmal.")
+    print("Wrong password. Please try again")
 
 task_5 = input("In wiche folder do you wana go? photos/music/messags/top_secret/documents")
 
+task_5 = input("Which folder do you want to open? photos/music/messages/top_secret/documents: ")
+
+task_5 = input("Which folder do you want to open? photos/music/messages/top_secret/documents: ")
+
 if task_5 == "photos":
-    print("In the folder are some old photps from you and James, but thers is nothing else what is intersitsng for you!")
+    print("The folder contains some old photos of you and James, but there is nothing else that interests you.")
+
 elif task_5 == "music":
-    print("You are in the folder whit the old music from you and James, you click on a song and isten to it...")
+    print("You open the folder containing the old music that you and James used to listen to. You click on a song and listen to it...")
     pygame.mixer.music.load(music1)
     pygame.mixer.music.play()
-elif task_5 == "messags":
-    print("You are in the right Folder")
-    wait()
-    print(messags1)
-    wait()
-    print(messag1)
-    
 
+    print("Oh no! You click on a file containing a virus. The PC is now broken!")
+    print(game_over)
+    break
+
+elif task_5 == "documents":
+    print("You open a folder filled with boring documents. Nothing special here...")
+
+elif task_5 == "messages":
+    print("You are in the right folder.")
+    wait()
+    print(messages1)
+    wait()
+    print(message2)
+    wait()
+    print("What could that message mean? You ask yourself...")
+    wait()
+
+    meaning = "the bunker"
+
+    while True:
+        task_4 = input("Enter the password: ").strip().lower()
+
+        if task_4 == meaning:
+            print(messages3)
+            break
+
+        print("No, that isn't the correct meaning of the message. Try again!")
