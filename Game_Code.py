@@ -1,77 +1,55 @@
 # importet moduls
 import time
+import pygame
 
-# lode textfiles and link them
-
-with open("story_txt/intro.txt", "r", encoding="utf-8") as file:
-    intro = file.read()
-
-with open("story_txt/knock.txt", "r", encoding="utf-8") as file:
-    knock = file.read()
-
-with open("story_txt/door_police.txt", "r", encoding="utf-8") as file:
-    door_police = file.read()
-
-with open("story_txt/chairs.txt", "r", encoding="utf-8") as file:
-    chairs = file.read()
-
-with open("story_txt/shocked.txt", "r", encoding="utf-8") as file:
-    shocked = file.read()
-
-with open("story_txt/photo_ordescription.txt", "r", encoding="utf-8") as file:
-    photo_ordescription = file.read()
-
-with open("story_txt/photo.txt", "r", encoding="utf-8") as file:
-    photo  = file.read()
-
-with open("story_txt/description.txt", "r", encoding="utf-8") as file:
-    description  = file.read()
-
-with open("story_txt/left.txt", "r", encoding="utf-8") as file:
-    left  = file.read()
+# lode music and link them
+music1 = "music/black_by_pearl_jam.ogg"
+pygame.init()
+audio_available = True
+try:
+    pygame.mixer.init()
+except Exception:
+    print("Warning: audio device not available; music will be disabled.")
+    audio_available = False
 
 
-with open("story_txt/go_or_bed.txt", "r", encoding="utf-8") as file:
-    go_or_bed  = file.read()
+# load text files safely
+def read_text(path: str) -> str:
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return f.read()
+    except FileNotFoundError:
+        print(f"Error: required file '{path}' not found.")
+        raise SystemExit(1)
 
-
-with open("story_txt/walk.txt", "r", encoding="utf-8") as file:
-    walk  = file.read()
-
-with open("story_txt/walkpart2.txt", "r", encoding="utf-8") as file:
-    walkpart2  = file.read()
-
-with open("story_txt/walkpart3.txt", "r", encoding="utf-8") as file:
-    walkpart3  = file.read()
-
-with open("story_txt/walkpart4.txt", "r", encoding="utf-8") as file:
-    walkpart4  = file.read()
-
-
-with open("story_txt/walkpart5.txt", "r", encoding="utf-8") as file:
-    walkpart5  = file.read()
-
-
-    
-with open("story_txt/dream.txt", "r", encoding="utf-8") as file:
-    dream  = file.read()
-
-with open("story_txt/dream2.txt", "r", encoding="utf-8") as file:
-    dream2  = file.read()
-with open("story_txt/dream3.txt", "r", encoding="utf-8") as file:
-    dream3  = file.read()
-
-
-with open("story_txt/waup.txt", "r", encoding="utf-8") as file:
-    waup  = file.read()
-
-
-with open("story_txt/waup2.txt", "r", encoding="utf-8") as file:
-    waup2  = file.read()
-
-with open("story_txt/pc1.txt", "r", encoding="utf-8") as file:
-    pc1  = file.read()
-
+intro = read_text("story_txt/intro.txt")
+knock = read_text("story_txt/knock.txt")
+door_police = read_text("story_txt/door_police.txt")
+chairs = read_text("story_txt/chairs.txt")
+shocked = read_text("story_txt/shocked.txt")
+photo_ordescription = read_text("story_txt/photo_ordescription.txt")
+photo = read_text("story_txt/photo.txt")
+description = read_text("story_txt/description.txt")
+left = read_text("story_txt/left.txt")
+go_or_bed = read_text("story_txt/go_or_bed.txt")
+walk = read_text("story_txt/walk.txt")
+walkpart2 = read_text("story_txt/walkpart2.txt")
+walkpart3 = read_text("story_txt/walkpart3.txt")
+walkpart4 = read_text("story_txt/walkpart4.txt")
+walkpart5 = read_text("story_txt/walkpart5.txt")
+dream = read_text("story_txt/dream.txt")
+dream2 = read_text("story_txt/dream2.txt")
+dream3 = read_text("story_txt/dream3.txt")
+waup = read_text("story_txt/waup.txt")
+waup2 = read_text("story_txt/waup2.txt")
+pc1 = read_text("story_txt/pc1.txt")
+messeag1 = read_text("story_txt/messeag1.txt")
+messeag2 = read_text("story_txt/messeag2.txt")
+messeag3 = read_text("story_txt/messeag3.txt")
+game_over = read_text("story_txt/game_over.txt")
+messeag4 = read_text("story_txt/messaeg4.txt")
+messeag5 = read_text("story_txt/messaeg5.txt")
+messeag6 = read_text("story_txt/messaeg6.txt")
 
 
 # def function that make that the player need to press "enter" to to continue with the story
@@ -212,11 +190,78 @@ while True:
     if task_4 == password:
         print("You unlocked the Pc!")
         break
-    print("Falsches Passwort. Bitte versuche es noch einmal.")
+    print("Wrong password. Please try again")
 
-task_5 = input("In wiche folder do you wana go? photos/music/picturs/messags/top_secret/documents")
+
+task_5 = input("Which folder do you want to open? photos/music/messages/top_secret/documents: ").strip().lower()
+
+while task_5 not in ["photos", "music", "top_secret", "documents", "messeages"]:
+    print("That folder dont exist.")
+
+    task_5 = input(
+        "Please choose: photos/music/messages/top_secret/documents:: "
+    ).strip().lower()
 
 if task_5 == "photos":
-    print("")
-elif task_4 == "V":
-elif
+    print("The folder contains some old photos of you and James, but there is nothing else that interests you.")
+
+elif task_5 == "music":
+    print("You open the folder containing the old music that you and James used to listen to. You click on a song and listen to it...")
+    task_5 = input(
+        "Please choose: photos/music/messages/top_secret/documents:: "
+    ).strip().lower()
+
+    if audio_available:
+        try:
+            pygame.mixer.music.load(music1)
+            pygame.mixer.music.play()
+        except Exception:
+            print(f"Could not play audio file: {music1}")
+
+
+    else:
+        print(f"(Audio disabled) would play: {music1}")
+
+elif task_5 == "top_secret":
+    print("Oh no! You click on a file containing a virus. The PC is now broken!")
+    print(game_over)
+    quit()
+
+elif task_5 == "documents":
+    print("You open a folder filled with boring documents. Nothing special here...")
+    task_5 = input(
+        "Please choose: photos/music/messages/top_secret/documents:: "
+    ).strip().lower()
+
+
+
+
+elif task_5 == "messages":
+    print("You are in the right folder.")
+    wait()
+    print(messeag1)
+    wait()
+    print(messeag2)
+    wait()
+    print("What could that message mean? You ask yourself...")
+    wait()
+
+    meaning = "the bunker"
+
+    while True:
+        task_4 = input("Enter the meaning og the messeag: ").strip().lower()
+
+        if task_4 == meaning:
+            print(messeag3)
+            quit()
+
+        print("No, that isn't the correct meaning of the message. Try again!")
+        task_4 = input("Enter the meaning og the messeag: ").strip().lower()
+
+wait()
+print(messeag4)
+wait
+print(messeag5)
+wait()
+print(messeag6)
+>>>>>>> 40d3fcc704ed12aedae2ae8a7d916c2492ebff99
