@@ -2,15 +2,6 @@
 import time
 import pygame
 
-# lode music and link them
-music1 = "music/black_by_pearl_jam.ogg"
-pygame.init()
-audio_available = True
-try:
-    pygame.mixer.init()
-except Exception:
-    print("Warning: audio device not available; music will be disabled.")
-    audio_available = False
 
 
 # load text files safely
@@ -211,17 +202,6 @@ elif task_5 == "music":
         "Please choose: photos/music/messages/top_secret/documents:: "
     ).strip().lower()
 
-    if audio_available:
-        try:
-            pygame.mixer.music.load(music1)
-            pygame.mixer.music.play()
-        except Exception:
-            print(f"Could not play audio file: {music1}")
-
-
-    else:
-        print(f"(Audio disabled) would play: {music1}")
-
 elif task_5 == "top_secret":
     print("Oh no! You click on a file containing a virus. The PC is now broken!")
     print(game_over)
@@ -264,4 +244,4 @@ wait
 print(messeag5)
 wait()
 print(messeag6)
->>>>>>> 40d3fcc704ed12aedae2ae8a7d916c2492ebff99
+
